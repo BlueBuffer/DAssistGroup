@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="720.0" minWidth="1024.0" prefHeight="800.0" prefWidth="1280.0" style="-fx-font-family: 'Arial Rounded MT Bold'; -fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">   <!-- ★ 全页面统一字体 -->
+
+    <children>
+      <AnchorPane layoutX="313.0" layoutY="235.0" />
+      <AnchorPane layoutX="234.0" prefHeight="800.0" prefWidth="1330.0" style="-fx-background-color: rgba(0,0,0,0.45);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="478.0" layoutY="282.0" prefHeight="280.0" prefWidth="450.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 5);">
+               <children>
+                  <Button layoutX="179.0" layoutY="197.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="91.0" style="-fx-background-color: D03B30;" text="Ok" textFill="WHITE" />
+                  <Label layoutX="155.0" layoutY="107.0" style="-fx-font-size: 16px; -fx-text-fill: #333;" text="Delete Successfully!">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="397.0" layoutY="14.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="43.0" style="-fx-background-color: transparent; -fx-background-radius: 0; -fx-border-color: transparent; -fx-padding: 0;" text="X" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+
+
+
+    </children>
+</AnchorPane>

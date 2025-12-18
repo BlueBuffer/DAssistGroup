@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="720.0" minWidth="1024.0" prefHeight="800.0" prefWidth="1280.0" style="-fx-font-family: 'Arial Rounded MT Bold'; -fx-background-color: F9FAFB;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">   <!-- ★ 全页面统一字体 -->
+
+    <children>
+
+        <!-- left Sidebar（gradient bakcground） -->
+        <VBox prefHeight="78.0" prefWidth="1280.0" spacing="25" AnchorPane.bottomAnchor="722.0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+
+            <children>
+            <AnchorPane prefHeight="65.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: transparent transparent #cccccc transparent; -fx-border-width: 0001;">
+               <children>
+      
+                      <!-- Branding：Logo + App Name + Slogan -->
+                      <VBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="-13.0" spacing="8">
+                          <padding>
+                              <Insets bottom="0" left="20" right="20" top="30" />
+                          </padding>
+      
+                          <children>
+                              <AnchorPane>
+                                  <children>
+      
+                                      <!-- LOGO -->
+                                      <ImageView fitHeight="46.0" fitWidth="43.0" layoutY="-7.0" preserveRatio="true">
+                                          <image>
+                                              <Image url="@images/logo.png" />
+                                          </image>
+                                      </ImageView>
+      
+      
+      
+                                      <!-- App 名称 -->
+                                      <Label layoutX="67.0" layoutY="-6.0" style="-fx-font-size: 22px; -fx-text-fill: black;" text="D-Assist">
+                                          <font>
+                                              <Font name="Arial Rounded MT Bold" size="12.0" />
+                                          </font>
+                                      </Label>
+
+
+      
+                                      <!-- Slogan -->
+                                      <Label layoutX="54.0" layoutY="20.0" style="-fx-font-size: 12px; -fx-text-fill: black; -fx-font-weight: 80;" text="Your AI Diabetes Assistant">
+                                          <font>
+                                              <Font name="Arial Rounded MT Bold" size="12.0" />
+                                          </font>
+                                      </Label>
+                                  </children>
+                              </AnchorPane>
+      
+                          </children>
+                      </VBox>
+                  <Button layoutX="1159.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #f0f0f0; -fx-background-radius: 8; -fx-cursor: hand;" text="⚙ Setting">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="8.0" left="16.0" right="16.0" top="8.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+
+            </children>
+        </VBox>
+      <AnchorPane layoutX="265.0" layoutY="160.0" prefHeight="359.0" prefWidth="783.0" style="-fx-background-color: ebebeb; -fx-background-radius: 20;">
+         <children>
+            <GridPane hgap="20" layoutX="42.0" layoutY="194.0" prefHeight="149.0" prefWidth="733.0" vgap="18">
+               <padding>
+                  <Insets bottom="25" left="50" right="50" top="10" />
+               </padding>
+               <columnConstraints>
+                  <ColumnConstraints minWidth="250.0" />
+                  <ColumnConstraints minWidth="150.0" />
+                  <ColumnConstraints maxWidth="135.33333333333337" minWidth="76.0" prefWidth="84.0" />
+                  <ColumnConstraints maxWidth="96.0" minWidth="36.0" prefWidth="88.0" />
+               </columnConstraints>
+               <children>
+                  <Label text="Target Blood Glucose:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="15" />
+                     </font>
+                  </Label>
+                  <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <TextField prefWidth="64" style="-fx-background-color: white; -fx-background-radius: 8;" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                  <Label prefHeight="15.0" prefWidth="61.0" text="mg/dL" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="14" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="29.0" prefWidth="313.0" text="Insulin Sensitivity (ISF): 1 UNIT LOWERS bg by:" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15" />
+                     </font>
+                  </Label>
+                  <Label text="1 unit lowers BG by" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="13" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="10.0" prefWidth="111.0" style="-fx-background-color: white; -fx-background-radius: 8;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="mg/dL" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Carb Ratio (ICR):" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15" />
+                     </font>
+                  </Label>
+                  <Label text="1 unit lowers BG by" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="13" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="64" style="-fx-background-color: white; -fx-background-radius: 8;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label text="g carbs" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14" />
+                     </font>
+                  </Label>
+               </children>
+               <rowConstraints>
+                  <RowConstraints maxHeight="34.00002034505208" minHeight="16.00002034505208" prefHeight="26.66664632161458" />
+                  <RowConstraints maxHeight="46.66668701171875" minHeight="19.33331298828125" prefHeight="28.66668701171875" />
+                  <RowConstraints maxHeight="30.66670735677083" minHeight="4.666646321614579" prefHeight="22.66664632161458" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane hgap="20" layoutX="50.0" layoutY="29.0" prefHeight="149.0" prefWidth="733.0" vgap="18">
+               <padding>
+                  <Insets bottom="25" left="50" right="50" top="10" />
+               </padding>
+               <columnConstraints>
+                  <ColumnConstraints maxWidth="292.3333333333333" minWidth="250.0" prefWidth="292.3333333333333" />
+                  <ColumnConstraints maxWidth="149.33331298828125" minWidth="144.0" prefWidth="144.0" />
+                  <ColumnConstraints maxWidth="135.33333333333337" minWidth="76.0" prefWidth="84.0" />
+                  <ColumnConstraints maxWidth="96.0" minWidth="36.0" prefWidth="88.0" />
+               </columnConstraints>
+               <children>
+                  <Label text="Current Blood Glucose:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="15" />
+                     </font>
+                  </Label>
+                  <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                  <TextField prefWidth="64" style="-fx-background-color: white; -fx-background-radius: 8;" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                  <Label prefHeight="15.0" prefWidth="61.0" text="mg/dL" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                     <font>
+                        <Font size="14" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="29.0" prefWidth="313.0" text="Carbs to Eat:" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="13" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="10.0" prefWidth="111.0" style="-fx-background-color: white; -fx-background-radius: 8;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font></TextField>
+                  <Label text="g" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-border-color: #888888; -fx-border-width: 0 0 1 0; -fx-border-style: dashed;" text="Personal Setting" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <rowConstraints>
+                  <RowConstraints maxHeight="34.00002034505208" minHeight="16.00002034505208" prefHeight="26.66664632161458" />
+                  <RowConstraints maxHeight="52.0" minHeight="19.33331298828125" prefHeight="27.33331298828125" />
+                  <RowConstraints maxHeight="30.66670735677083" minHeight="0.0" prefHeight="24.66668701171875" />
+                  <RowConstraints maxHeight="30.66670735677083" minHeight="0.0" prefHeight="24.66668701171875" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </AnchorPane>
+        <AnchorPane layoutX="345.0" layoutY="41.0" prefHeight="0.0" prefWidth="196.0">
+            <children>
+
+
+                <!-- 右侧主内容区 -->
+                <VBox spacing="18">
+
+                    <children>
+                        <AnchorPane />
+
+                    </children>
+
+                </VBox>
+            </children>
+        </AnchorPane>
+      <VBox layoutY="66.0" prefHeight="734.0" prefWidth="74.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane>
+               <children>
+                  <Button layoutX="10.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="57.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="☰">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Label layoutX="544.0" layoutY="78.0" text="Mealtime Insulin Dose Calculator">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="117.0" text="Disclaimer: This tool is for informational purposes only and does not replace professional medical advice" textFill="#999999">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <VBox layoutX="256.0" layoutY="243.0" prefHeight="0.0" prefWidth="1111.0" />
+      <AnchorPane layoutX="235.0" layoutY="656.0" />
+      <GridPane hgap="20" layoutX="265.0" layoutY="536.0" prefHeight="149.0" prefWidth="783.0" style="-fx-background-color: ebebeb; -fx-border-color: black; -fx-border-width: 1; -fx-border-radius: 10;" vgap="18">
+         <padding>
+            <Insets bottom="25" left="50" right="50" top="10" />
+         </padding>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints minWidth="250.0" />
+            <ColumnConstraints minWidth="150.0" />
+            <ColumnConstraints maxWidth="135.33333333333337" minWidth="76.0" prefWidth="84.0" />
+            <ColumnConstraints maxWidth="96.0" minWidth="36.0" prefWidth="88.0" />
+         </columnConstraints>
+         <children>
+            <Label text="Suggested total dose:" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15" />
+               </font>
+            </Label>
+            <Label text="" GridPane.columnIndex="2" />
+            <TextField prefWidth="64" style="-fx-background-color: white; -fx-background-radius: 8;" GridPane.columnIndex="3" />
+            <Label prefHeight="15.0" prefWidth="61.0" text="Units" GridPane.columnIndex="4">
+               <font>
+                  <Font size="14" />
+               </font>
+            </Label>
+            <Label prefHeight="29.0" prefWidth="313.0" text="Carb Dose:" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15" />
+               </font>
+            </Label>
+            <Label text="to cover 60g carbs" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13" />
+               </font>
+            </Label>
+            <TextField prefHeight="10.0" prefWidth="111.0" style="-fx-background-color: white; -fx-background-radius: 8;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Units" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Correctioon Dose:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15" />
+               </font>
+            </Label>
+            <Label text="to correct 220 to 120g" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="13" />
+               </font>
+            </Label>
+            <TextField prefWidth="64" style="-fx-background-color: white; -fx-background-radius: 8;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label text="Units" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14" />
+               </font>
+            </Label>
+      
+                    <!-- LOGO -->
+                    <ImageView fitHeight="26.0" fitWidth="15.0" preserveRatio="true">
+                        <image>
+                            <Image url="@images/Info_icon.png" />
+                        </image>
+                    </ImageView>
+         </children>
+         <rowConstraints>
+            <RowConstraints maxHeight="34.00002034505208" minHeight="16.00002034505208" prefHeight="26.66664632161458" />
+            <RowConstraints maxHeight="46.66668701171875" minHeight="19.33331298828125" prefHeight="28.66668701171875" />
+            <RowConstraints maxHeight="30.66670735677083" minHeight="4.666646321614579" prefHeight="22.66664632161458" />
+         </rowConstraints>
+      </GridPane>
+      <Button layoutX="598.0" layoutY="720.0" mnemonicParsing="false" style="-fx-background-color: D78583; -fx-background-radius: 10; -fx-cursor: hand;" text="Back">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
+         </padding>
+      </Button>
+
+
+
+    </children>
+</AnchorPane>

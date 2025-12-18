@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="349.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox alignment="CENTER" layoutX="88.0" layoutY="82.0" prefHeight="338.0" prefWidth="349.0" spacing="12.0" style="-fx-border-radius: 30; -fx-background-radius: 30; -fx-background-color: #d3d3d3; -fx-border-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="161.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/leave_icon.png" />
+                    </image>
+                </ImageView>
+                <Label text="Oh no, You are leaving...">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label text="Are you sure?">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #ff0000; -fx-background-radius: 10;" text="Yes">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                    </font></Button>
+                <Button cancelButton="true" mnemonicParsing="false" prefHeight="28.0" prefWidth="91.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10; -fx-background-radius: 10;" text="Cancel">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                    </font></Button>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding></VBox>
+    </children>
+</AnchorPane>

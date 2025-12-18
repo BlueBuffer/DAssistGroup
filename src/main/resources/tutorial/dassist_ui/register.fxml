@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1024.0" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <items>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #e7d8d7, #b4a9a8, #968d8c);">
+            <children>
+                <ImageView fitHeight="378.0" fitWidth="366.0" layoutX="14.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/logo.png" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="797.0" prefWidth="877.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <VBox alignment="CENTER_LEFT" layoutX="-1.0" layoutY="63.0" prefHeight="736.0" prefWidth="877.0" spacing="20.0">
+                    <children>
+                        <Label prefHeight="83.0" prefWidth="256.0" text="Create an Account">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="25.0" />
+                            </font>
+                        </Label>
+                        <Label text="Name">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                            </font></Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="640.0" promptText="Your Name" style="-fx-background-color: #f0f0f0; -fx-background-radius: 15;">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                            </font></TextField>
+                        <Label text="Email address">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                            </font></Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="640.0" promptText="Your password" style="-fx-background-color: #f0f0f0; -fx-background-radius: 15;">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                            </font></TextField>
+                        <Label prefHeight="17.0" prefWidth="123.0" text="Password">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                            </font></Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="640.0" promptText="Your email address" style="-fx-background-color: #f0f0f0; -fx-background-radius: 15;">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                            </font></TextField>
+                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="640.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Register" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                            </font></Button>
+                    </children>
+                    <opaqueInsets>
+                        <Insets left="30.0" />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="100.0" />
+                    </padding></VBox>
+                <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #ffffff;" text="← Back">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                    </font></Button>
+                <Button layoutX="731.0" layoutY="12.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #000000; -fx-background-radius: 10;" text="Log in" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="15.0" />
+                    </font></Button>
+            </children></AnchorPane>
+    </items>
+</SplitPane>

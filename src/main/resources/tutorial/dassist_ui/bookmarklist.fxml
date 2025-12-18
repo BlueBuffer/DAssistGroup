@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="rootPane" minHeight="720" minWidth="1024" prefHeight="800" prefWidth="1280" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12" styleClass="top-bar">
+            <padding><Insets bottom="10" left="18" right="18" top="10" /></padding>
+
+            <children>
+
+                <ImageView fitHeight="40" fitWidth="40">
+                    <image><Image url="@images/logo.png" /></image>
+                </ImageView>
+
+                <VBox>
+                    <children>
+                        <Label styleClass="program-name" text="D-Assist">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font></Label>
+                        <Label styleClass="tagline" text="Your AI Diabetes Assistant">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font></Label>
+                    </children>
+                </VBox>
+
+                <Pane HBox.hgrow="ALWAYS" />
+                <Button styleClass="settings-button" text="Settings">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font></Button>
+
+            </children>
+        </HBox>
+    </top>
+
+    <!-- MINIMIZED LEFT SIDEBAR -->
+    <left>
+        <VBox prefWidth="48" spacing="10" styleClass="left-column">
+            <padding><Insets bottom="12" left="6" right="6" top="12" /></padding>
+            <children>
+                <Button styleClass="hamburger-button" text="☰">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font></Button>
+                <Pane VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+    </left>
+
+    <!-- BOOKMARK LIST CENTER CONTENT -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="bookmark-scroll">
+            <content>
+
+                <VBox alignment="TOP_CENTER" spacing="22" styleClass="bookmark-column">
+                    <padding><Insets left="40" right="40" top="30" /></padding>
+
+                    <children>
+
+                        <Label prefHeight="46.0" prefWidth="168.0" styleClass="bookmark-page-header" text="Bookmark List">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="22.0" />
+                            </font></Label>
+
+                        <!-- ⭐ NEW: BOOKMARK SEARCH BAR ⭐ -->
+                        <TextField fx:id="bookmarkSearch" maxWidth="942.0" prefHeight="42.0" prefWidth="942.0" promptText="Search bookmark..." style="-fx-background-radius: 30;">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font></TextField>
+
+                        <!-- Bookmark Card -->
+                        <VBox spacing="12" style="-fx-background-color: rgb(254, 247, 255);" styleClass="bookmark-card">
+                            <padding><Insets bottom="16" left="22" right="22" top="16" /></padding>
+
+                            <children>
+
+                                <HBox alignment="CENTER_LEFT">
+                                    <children>
+                                        <Label styleClass="bookmark-title" text="Bookmark1">
+                                            <font>
+                                                <Font name="Arial Rounded MT Bold" size="16.0" />
+                                            </font></Label>
+                                        <Pane HBox.hgrow="ALWAYS" />
+                                        <Button styleClass="bookmark-delete-btn" text="✕">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="12.0" />
+                                 </font></Button>
+                                    </children>
+                                </HBox>
+
+                                <Label styleClass="bookmark-question" text="What are the specific dosage adjustment guidelines for Metformin in a patient with reduced kidney function?" wrapText="true">
+                                    <font>
+                                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                                    </font></Label>
+
+                                <Label styleClass="bookmark-preview" text="AI answer: No dosage adjustment is generally needed..." wrapText="true">
+                                    <font>
+                                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                                    </font></Label>
+
+                                <Button alignment="CENTER" contentDisplay="CENTER" styleClass="bookmark-open-button" text="Go to full chat">
+                                    <VBox.margin>
+                                        <Insets left="450.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                                    </font></Button>
+
+                            </children>
+                        </VBox>
+
+                    </children>
+                </VBox>
+
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
