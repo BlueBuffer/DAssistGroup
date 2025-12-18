@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="720.0" minWidth="1024.0" prefHeight="800.0" prefWidth="1280.0" style="-fx-font-family: 'Arial Rounded MT Bold'; -fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">   <!-- ★ 全页面统一字体 -->
+<AnchorPane minHeight="720.0" minWidth="1024.0" prefHeight="800.0" prefWidth="1280.0" style="-fx-font-family: 'Arial Rounded MT Bold'; -fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tutorial.dassist_ui.AdminDashboardUploadFileController">   <!-- ★ 全页面统一字体 -->
 
     <children>
 
