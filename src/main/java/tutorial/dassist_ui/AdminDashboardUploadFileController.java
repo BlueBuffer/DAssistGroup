@@ -20,7 +20,8 @@ public class AdminDashboardUploadFileController implements Initializable {
 
     @FXML private AnchorPane dropArea;
 
-    private VBox uploadsBox; // dynamically injected under the drop area
+    private VBox uploadsBox;
+
     private final ExecutorService executor =
             Executors.newFixedThreadPool(Math.max(2, Runtime.getRuntime().availableProcessors() / 2));
 
@@ -38,18 +39,20 @@ public class AdminDashboardUploadFileController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             AppPaths.ensureDirs();
-            kb.init(); // creates SQLite db + table if needed
+            kb.init();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // Create uploads VBox under the dropArea (matches your HBox area around y=491)
         createUploadsBox();
 
-        // Click to browse
+        // Persistent bars when reopening the screen
+        loadPersistentUploads();
+
+        // Click-to-browse
         dropArea.setOnMouseClicked(e -> browseFiles());
 
-        // Drag n drop
+        // Drag & Drop
         dropArea.setOnDragOver(this::onDragOver);
         dropArea.setOnDragDropped(this::onDragDropped);
         dropArea.setOnDragEntered(e -> dropArea.setStyle(DROP_HOVER_STYLE));
@@ -61,7 +64,7 @@ public class AdminDashboardUploadFileController implements Initializable {
         uploadsBox.setPrefWidth(dropArea.getPrefWidth());
         uploadsBox.setLayoutX(dropArea.getLayoutX());
 
-        // place it directly under the drop area
+        // Place below the drop area (your HBox sample is around y=491)
         double y = dropArea.getLayoutY() + dropArea.getPrefHeight() + 42;
         uploadsBox.setLayoutY(y);
 
@@ -69,7 +72,23 @@ public class AdminDashboardUploadFileController implements Initializable {
         if (parent instanceof AnchorPane root) {
             root.getChildren().add(uploadsBox);
         } else {
-            throw new IllegalStateException("dropArea parent is not AnchorPane. Can't inject uploadsBox.");
+            throw new IllegalStateException("dropArea parent is not AnchorPane.");
+        }
+    }
+
+    private void loadPersistentUploads() {
+        try {
+            List<KnowledgeDoc> docs = kb.listActiveDocs();
+
+            for (KnowledgeDoc doc : docs) {
+                UploadRowView row = new UploadRowView(doc.originalName(), doc.sizeBytes());
+                uploadsBox.getChildren().add(row.root());
+                row.markCompleted(doc);
+
+                row.setOnClose(() -> requestDelete(doc, row));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -81,9 +100,7 @@ public class AdminDashboardUploadFileController implements Initializable {
         );
 
         List<File> files = chooser.showOpenMultipleDialog(dropArea.getScene().getWindow());
-        if (files != null) {
-            files.forEach(this::startUpload);
-        }
+        if (files != null) files.forEach(this::startUpload);
     }
 
     private void onDragOver(DragEvent e) {
@@ -116,7 +133,7 @@ public class AdminDashboardUploadFileController implements Initializable {
     }
 
     private void startUpload(File file) {
-        // quick extension validation (service also validates)
+        // Validate format quickly (service validates too)
         String n = file.getName().toLowerCase();
         if (!(n.endsWith(".pdf") || n.endsWith(".docx") || n.endsWith(".txt"))) {
             UploadRowView row = new UploadRowView(file.getName(), file.length());
@@ -130,23 +147,48 @@ public class AdminDashboardUploadFileController implements Initializable {
 
         Task<KnowledgeDoc> task = kb.createUploadTask(file);
 
-        // bind UI row to the task
+        // show size updates while uploading
         row.bindToTask(task);
 
-        // cancel/remove on close icon
+        // While uploading, X cancels and removes row (no DB insert yet if cancelled early)
         row.setOnClose(() -> {
             if (task.isRunning()) task.cancel();
             uploadsBox.getChildren().remove(row.root());
         });
 
-        task.setOnSucceeded(ev -> row.markCompleted(task.getValue()));
+        task.setOnSucceeded(ev -> {
+            KnowledgeDoc doc = task.getValue();
+            row.markCompleted(doc);
+
+            // After completion, X should do permanent delete with confirmation
+            row.setOnClose(() -> requestDelete(doc, row));
+        });
+
         task.setOnFailed(ev -> row.markFailed(task.getException()));
         task.setOnCancelled(ev -> row.markCancelled());
 
         executor.submit(task);
     }
 
-    // Call this from your app shutdown if you want
+    private void requestDelete(KnowledgeDoc doc, UploadRowView row) {
+        boolean confirmed = DeleteConfirmDialog.show(
+                dropArea.getScene().getWindow(),
+                "Are you sure you want to delete this file?"
+        );
+
+        if (!confirmed) return;
+
+        // UI state
+        row.markDeleting();
+
+        Task<Void> deleteTask = kb.createDeleteTask(doc.docId());
+        deleteTask.setOnSucceeded(e -> uploadsBox.getChildren().remove(row.root()));
+        deleteTask.setOnFailed(e -> row.markFailed(deleteTask.getException()));
+
+        executor.submit(deleteTask);
+    }
+
+    // Optional: call when closing app (if you have a central lifecycle)
     public void shutdown() {
         executor.shutdownNow();
         kb.close();

@@ -93,6 +93,13 @@ public class UploadRowView {
         statusText.setText("Completed");
     }
 
+    public void markDeleting() {
+        stopSpinner();
+        statusText.setText("Deleting...");
+        setLoadingIcon(); // reuse spinner
+        setCloseEnabled(false);
+    }
+
     public void markFailed(Throwable ex) {
         stopSpinner();
         sizeLabel.textProperty().unbind();
@@ -133,4 +140,10 @@ public class UploadRowView {
     private static Image loadImg(String path) {
         return new Image(Objects.requireNonNull(UploadRowView.class.getResourceAsStream(path)));
     }
+
+    public void setCloseEnabled(boolean enabled) {
+        closeIcon.setMouseTransparent(!enabled);
+        closeIcon.setOpacity(enabled ? 1.0 : 0.4);
+    }
+
 }

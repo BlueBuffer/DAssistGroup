@@ -13,6 +13,7 @@ import java.security.MessageDigest;
 import java.time.Instant;
 import java.util.HexFormat;
 import java.util.UUID;
+import java.util.List;
 
 public class KnowledgeBaseService {
 
@@ -177,4 +178,43 @@ public class KnowledgeBaseService {
         double gb = mb / 1024.0;
         return String.format("%.2f GB", gb);
     }
+
+    public List<KnowledgeDoc> listActiveDocs() throws Exception {
+        return db.listActive();
+    }
+
+    public Task<Void> createDeleteTask(String docId) {
+        return new Task<>() {
+            @Override
+            protected Void call() throws Exception {
+                KnowledgeDoc doc = db.findById(docId);
+                if (doc == null) return null;
+
+                // delete raw file + doc folder
+                try {
+                    Path raw = Path.of(doc.rawPath());
+                    Files.deleteIfExists(raw);
+
+                    Path rawDir = raw.getParent(); // .../raw/<docId>/
+                    if (rawDir != null && Files.isDirectory(rawDir)) {
+                        // delete folder if empty
+                        try (var s = Files.list(rawDir)) {
+                            if (s.findAny().isEmpty()) Files.deleteIfExists(rawDir);
+                        }
+                    }
+                } catch (Exception ignored) {}
+
+                // delete extracted text
+                try {
+                    Files.deleteIfExists(Path.of(doc.textPath()));
+                } catch (Exception ignored) {}
+
+                // delete DB row (this removes UNIQUE constraint block for re-upload)
+                db.deleteById(docId);
+
+                return null;
+            }
+        };
+    }
+
 }
