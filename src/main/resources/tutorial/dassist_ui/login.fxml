@@ -1,70 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.2883611691022964" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1024.0" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="tutorial.dassist_ui.LoginController">
+
     <items>
-        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="0.0" prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #e7d8d7, #b4a9a8, #968d8c);">
+
+        <!-- LEFT SIDE -->
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+                    minHeight="720.0" minWidth="0.0"
+                    prefHeight="800.0" prefWidth="400.0"
+                    style="-fx-background-color: linear-gradient(to bottom, #e7d8d7, #b4a9a8, #968d8c);">
+
             <children>
-                <ImageView fitHeight="457.0" fitWidth="307.0" layoutX="36.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="457.0" fitWidth="307.0"
+                           layoutX="36.0" layoutY="183.0"
+                           pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@images/logo.png" />
+                        <Image url="@images/logo.png"/>
                     </image>
                 </ImageView>
-            </children></AnchorPane>
-        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="1073.0" style="-fx-background-color: #ffffff;">
+            </children>
+        </AnchorPane>
+
+        <!-- RIGHT SIDE -->
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+                    minHeight="0.0" minWidth="0.0"
+                    prefHeight="800.0" prefWidth="1073.0"
+                    style="-fx-background-color: #ffffff;">
+
             <children>
-                <HBox alignment="CENTER" layoutX="-3.0" prefHeight="78.0" prefWidth="913.0" spacing="500.0" style="-fx-background-color: white;">
+
+                <!-- TOP BAR -->
+                <HBox alignment="CENTER" layoutX="-3.0"
+                      prefHeight="78.0" prefWidth="913.0"
+                      spacing="500.0"
+                      style="-fx-background-color: white;">
+
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="143.0" style="-fx-background-color: #ffffff;" text="← Back">
+                        <Button fx:id="backButton"
+                                mnemonicParsing="false"
+                                onAction="#goBack"
+                                prefHeight="49.0" prefWidth="143.0"
+                                style="-fx-background-color: #ffffff;"
+                                text="← Back">
                             <font>
-                                <Font name="Arial Rounded MT Bold" size="16.0" />
+                                <Font name="Arial Rounded MT Bold" size="16.0"/>
                             </font>
                             <HBox.margin>
-                                <Insets right="150.0" />
+                                <Insets right="150.0"/>
                             </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="103.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Sign up">
+
+                        <Button fx:id="signupButton"
+                                mnemonicParsing="false"
+                                onAction="#goToRegister"
+                                prefHeight="47.0" prefWidth="103.0"
+                                style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 10px; -fx-background-radius: 10px;"
+                                text="Sign up">
                             <font>
-                                <Font name="Arial Rounded MT Bold" size="13.0" />
+                                <Font name="Arial Rounded MT Bold" size="13.0"/>
                             </font>
                         </Button>
                     </children>
                 </HBox>
-                <VBox alignment="CENTER_LEFT" layoutX="-5.0" layoutY="76.0" prefHeight="727.0" prefWidth="913.0" spacing="20.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="76.0">
+
+                <!-- FORM -->
+                <VBox alignment="CENTER_LEFT"
+                      layoutX="-5.0" layoutY="76.0"
+                      prefHeight="727.0" prefWidth="913.0"
+                      spacing="20.0"
+                      style="-fx-background-color: white;"
+                      AnchorPane.bottomAnchor="-6.0"
+                      AnchorPane.leftAnchor="-5.0"
+                      AnchorPane.rightAnchor="-2.0"
+                      AnchorPane.topAnchor="76.0">
+
                     <children>
                         <Label prefHeight="28.0" prefWidth="104.0" text="Log in">
                             <font>
-                                <Font name="Arial Rounded MT Bold" size="30.0" />
+                                <Font name="Arial Rounded MT Bold" size="30.0"/>
                             </font>
                         </Label>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="463.0" promptText="Email" style="-fx-background-color: #f0f0f0; -fx-background-radius: 15;">
+
+                        <TextField fx:id="emailField"
+                                   prefHeight="52.0" prefWidth="463.0"
+                                   promptText="Email"
+                                   style="-fx-background-color: #f0f0f0; -fx-background-radius: 15;">
                             <font>
-                                <Font name="Arial Rounded MT Bold" size="15.0" />
-                            </font></TextField>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="463.0" promptText="Password" style="-fx-background-color: #f0f0f0; -fx-background-radius: 15;">
+                                <Font name="Arial Rounded MT Bold" size="15.0"/>
+                            </font>
+                        </TextField>
+
+                        <!-- ✅ FIXED: PasswordField + fx:id -->
+                        <PasswordField fx:id="passwordField"
+                                       prefHeight="52.0" prefWidth="463.0"
+                                       promptText="Password"
+                                       style="-fx-background-color: #f0f0f0; -fx-background-radius: 15;">
                             <font>
-                                <Font name="Arial Rounded MT Bold" size="15.0" />
-                            </font></TextField>
-                        <CheckBox mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Remember Me">
+                                <Font name="Arial Rounded MT Bold" size="15.0"/>
+                            </font>
+                        </PasswordField>
+
+                        <!-- ✅ FIXED: CheckBox fx:id -->
+                        <CheckBox fx:id="rememberMeCheckBox"
+                                  mnemonicParsing="false"
+                                  style="-fx-background-color: #ffffff;"
+                                  text="Remember Me">
                             <font>
-                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                                <Font name="Arial Rounded MT Bold" size="15.0"/>
                             </font>
                         </CheckBox>
-                        <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="463.0" style="-fx-background-color: #000000; -fx-background-radius: 15;" text="Log in" textFill="WHITE">
+
+                        <!-- ✅ FIXED: Proper Button (not self-closed) -->
+                        <Button fx:id="loginButton"
+                                mnemonicParsing="false"
+                                text="Log in"
+                                onAction="#handleLogin"
+                                prefHeight="52.0"
+                                prefWidth="463.0"
+                                style="-fx-background-color: #000000; -fx-background-radius: 20; -fx-text-fill: white;">
                             <font>
-                                <Font name="Arial Rounded MT Bold" size="15.0" />
+                                <Font name="Arial Rounded MT Bold" size="15.0"/>
                             </font>
                         </Button>
+
+                        <!-- ✅ Add message label for errors/success -->
+                        <Label fx:id="messageLabel"
+                               text=""
+                               wrapText="true"
+                               style="-fx-text-fill: red; -fx-font-size: 13;"/>
                     </children>
+
                     <padding>
-                        <Insets left="100.0" />
+                        <Insets left="100.0"/>
                     </padding>
+
                 </VBox>
-            </children></AnchorPane>
+
+            </children>
+        </AnchorPane>
+
     </items>
 </SplitPane>
