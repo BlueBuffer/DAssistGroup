@@ -10,10 +10,12 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mealtime-calculator.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
-        stage.setTitle("D-Assist - Mealtime Insulin Dose Calculator");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                "/tutorial/dassist_ui/admin_dashboard.fxml"
+        ));
+        Scene scene = new Scene(loader.load());
         stage.setScene(scene);
+        stage.setTitle("Upload Test");
         stage.show();
     }
 
