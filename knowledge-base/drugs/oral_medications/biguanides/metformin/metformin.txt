@@ -1,0 +1,53 @@
+DRUG NAME: Metformin
+SOURCE: MedlinePlus (NIH, public)
+
+[USES]
+Metformin is used along with diet and exercise to control high blood sugar
+in people with type 2 diabetes mellitus. It helps improve the body’s response
+to insulin and lowers the amount of sugar produced by the liver and absorbed
+by the intestines.
+
+[DOSAGES]
+Metformin is taken by mouth, usually one to three times daily with meals.
+Treatment is typically started at a low dose and increased gradually to reduce
+stomach upset.
+
+Patients should follow their healthcare provider’s instructions carefully,
+continue their diet and exercise program, and monitor blood sugar regularly
+while taking metformin.
+
+[SIDE EFFECTS]
+Metformin may cause serious side effects, including a rare but potentially
+life-threatening condition called lactic acidosis. Symptoms of lactic acidosis
+may include unusual tiredness, muscle pain, trouble breathing, stomach
+discomfort, dizziness, or a slow or irregular heartbeat.
+
+Common side effects of metformin include diarrhea, nausea, vomiting, upset
+stomach, gas, and a metallic taste in the mouth. These effects often improve
+as the body adjusts to the medication.
+
+[CONTRAINDICATIONS]
+Metformin should not be used in patients with kidney disease, severe liver
+disease, or metabolic acidosis, including diabetic ketoacidosis.
+
+Metformin should also be avoided in people with conditions that increase
+the risk of lactic acidosis, such as severe dehydration, serious infection,
+heart failure requiring medication, or excessive alcohol use.
+
+[DRUG PRESCRIPTION]
+Metformin can interact with other medications. Some medicines may affect
+kidney function or blood sugar control and increase the risk of side effects.
+
+Dosage adjustments or closer blood glucose monitoring may be required
+when metformin is used together with other drugs.
+
+[POTENTIAL DRUG INTERACTIONS]
+Certain medications may interfere with how metformin works or increase
+the risk of side effects.
+
+These include contrast dyes used in imaging tests, diuretics, corticosteroids,
+insulin, sulfonylureas, and alcohol.
+
+Some drugs may raise blood sugar levels, while others may increase the risk
+of low blood sugar when taken with metformin. Careful blood glucose
+monitoring is recommended when metformin is used with other medications.

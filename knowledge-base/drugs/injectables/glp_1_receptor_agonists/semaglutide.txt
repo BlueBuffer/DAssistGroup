@@ -1,0 +1,52 @@
+DRUG NAME: Semaglutide (Ozempic®)
+SOURCE: MedlinePlus (NIH, public)
+
+[USES]
+Semaglutide is used along with diet and exercise to improve blood sugar control
+in adults with type 2 diabetes mellitus. It is also used to reduce the risk of
+major cardiovascular events, such as heart attack or stroke, in adults with
+type 2 diabetes mellitus who have known heart disease.
+
+[DOSAGES]
+Semaglutide is supplied as a solution in a prefilled pen for subcutaneous
+injection. It is injected once weekly, on the same day each week, at any time
+of day, with or without meals.
+
+Injection sites include the abdominal area (stomach), thigh, or upper arm.
+Semaglutide should not be injected into a vein or muscle. Patients should
+follow their healthcare provider’s instructions carefully regarding dosing
+and injection technique.
+
+[SIDE EFFECTS]
+Semaglutide may cause serious side effects, including inflammation of the
+pancreas (pancreatitis), gallbladder disease, kidney problems, low blood sugar
+(hypoglycemia) when used with insulin or certain diabetes medications, and
+serious allergic reactions.
+
+The most commonly reported side effects include nausea, vomiting, diarrhea,
+abdominal pain, and constipation.
+
+[CONTRAINDICATIONS]
+Semaglutide should not be used in patients with a personal or family history
+of medullary thyroid carcinoma (MTC) or in patients with Multiple Endocrine
+Neoplasia syndrome type 2 (MEN 2).
+
+Do not use semaglutide if you are allergic to semaglutide or any of its
+ingredients.
+
+[DRUG PRESCRIPTION]
+Semaglutide can interact with other medications. Because semaglutide delays
+gastric emptying, it may affect the absorption of oral medicines.
+
+Dosage adjustments of other diabetes medications, including insulin or
+sulfonylureas, may be required to reduce the risk of hypoglycemia. Increased
+blood glucose monitoring is recommended when semaglutide is used together
+with other medications.
+
+[POTENTIAL DRUG INTERACTIONS]
+Semaglutide may increase the risk of hypoglycemia when used with insulin or
+insulin secretagogues, such as sulfonylureas.
+
+Because semaglutide slows gastric emptying, it may change how quickly oral
+medications are absorbed. Blood glucose levels should be monitored closely
+when semaglutide is used with other medications.

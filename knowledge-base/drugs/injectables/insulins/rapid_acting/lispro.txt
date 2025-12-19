@@ -1,0 +1,58 @@
+DRUG NAME: Insulin Lispro (Humalog®)
+SOURCE: MedlinePlus (NIH, public)
+
+[USES]
+Insulin Lispro is a fast-acting, man-made insulin used to control high blood sugar in adults and children with diabetes mellitus. It helps improve glycemic control and reduces the risk of diabetes-related complications when used as part of a comprehensive diabetes management plan.
+
+[DOSAGES]
+Insulin Lispro should be used exactly as prescribed by a healthcare provider. It is typically injected subcutaneously within 15 minutes before a meal or immediately after eating. It may also be administered by continuous subcutaneous infusion using an insulin pump.
+
+Dosage and timing depend on individual blood glucose levels, meal patterns, physical activity, and clinical response. Injection sites should be rotated to reduce the risk of lipodystrophy and other skin reactions.
+
+[SIDE EFFECTS]
+Insulin Lispro may cause serious side effects, including:
+- Low blood sugar (hypoglycemia)
+- Serious allergic reactions
+- Low potassium levels (hypokalemia)
+- Heart failure when used with certain diabetes medications such as thiazolidinediones (TZDs)
+
+The most commonly reported side effects include:
+- Hypoglycemia
+- Injection site reactions
+- Lipodystrophy (thickened or pitted skin at injection sites)
+- Weight gain
+- Swelling of the hands or feet
+- Itching and rash
+
+[CONTRAINDICATIONS]
+Insulin Lispro should not be used in the following situations:
+- During episodes of hypoglycemia
+- In patients with known hypersensitivity to Insulin Lispro or any of its ingredients
+
+[DRUG PRESCRIPTION]
+Dosage modification may be necessary when Insulin Lispro is used concomitantly with certain medications. Increased frequency of blood glucose monitoring is recommended when initiating, adjusting, or discontinuing interacting drugs.
+
+[POTENTIAL DRUG INTERACTIONS]
+Certain medications may affect the glucose-lowering effect of Insulin Lispro.
+
+Medicines that may increase the risk of hypoglycemia include:
+- Other antidiabetic agents
+- ACE inhibitors
+- Monoamine oxidase inhibitors (MAOIs)
+- Salicylates
+- Sulfonamide antibiotics
+
+Medicines that may reduce the effectiveness of Insulin Lispro include:
+- Corticosteroids
+- Diuretics
+- Oral contraceptives
+- Thyroid hormones
+- Sympathomimetic agents
+
+Medicines that may increase or decrease the effect of Insulin Lispro include:
+- Alcohol
+- Beta-blockers
+- Clonidine
+- Lithium salts
+
+Some medications, such as beta-blockers, may also mask the warning signs and symptoms of hypoglycemia.

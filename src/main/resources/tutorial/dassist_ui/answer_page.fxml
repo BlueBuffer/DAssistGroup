@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="rootPane"
+            minHeight="720.0"
+            minWidth="1024.0"
+            prefHeight="800.0"
+            prefWidth="1280.0"
+            stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.AnswerPageController">
+
+    <!-- ================= TOP BAR ================= -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12" styleClass="top-bar">
+            <padding>
+                <Insets bottom="10" left="18" right="18" top="10"/>
+            </padding>
+
+            <ImageView fitHeight="40" fitWidth="40">
+                <image>
+                    <Image url="@images/logo.png"/>
+                </image>
+            </ImageView>
+
+            <VBox spacing="0">
+                <Label styleClass="program-name" text="D-Assist"/>
+                <Label styleClass="tagline" text="Your AI Diabetes Assistant"/>
+            </VBox>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button text="Back" onAction="#onBack"/>
+        </HBox>
+    </top>
+
+    <!-- ================= LEFT ================= -->
+    <left>
+        <VBox prefWidth="48" spacing="10" styleClass="left-column">
+            <padding>
+                <Insets bottom="12" left="6" right="6" top="12"/>
+            </padding>
+
+            <Button styleClass="hamburger-button" text="☰"/>
+            <Pane VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </left>
+
+    <!-- ================= CENTER ================= -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="chat-scroll">
+            <content>
+                <VBox alignment="TOP_CENTER" spacing="18" styleClass="chat-column">
+                    <padding>
+                        <Insets bottom="24" left="36" right="36" top="24"/>
+                    </padding>
+
+                    <!-- Conversation -->
+                    <VBox prefWidth="900" spacing="18" styleClass="conversation">
+
+                        <!-- User question -->
+                        <HBox alignment="CENTER_RIGHT">
+                            <Label fx:id="questionLabel"
+                                   maxWidth="640"
+                                   wrapText="true"
+                                   styleClass="user-bubble"/>
+                        </HBox>
+
+                        <!-- AI Answer -->
+                        <VBox spacing="12" styleClass="ai-response">
+
+                            <!-- ⭐ MAIN ANSWER (dynamic) -->
+                            <Label fx:id="answerLabel"
+                                   wrapText="true"
+                                   styleClass="answer-text"/>
+
+                            <Separator/>
+
+                            <!-- Sources -->
+                            <Label styleClass="sources-heading" text="Sources"/>
+                            <VBox fx:id="sourcesBox" spacing="6"/>
+
+                            <!-- Action row -->
+                            <HBox alignment="CENTER_LEFT" spacing="12" styleClass="action-row">
+
+                                <!-- Copy Answer -->
+                                <Button fx:id="copyBtn"
+                                        text="📋"
+                                        styleClass="action-icon"
+                                        onAction="#onCopy"/>
+
+                                <!-- Bookmark -->
+                                <Button fx:id="bookmarkBtn"
+                                        text="💾"
+                                        styleClass="action-icon"
+                                        onAction="#onBookmark"/>
+
+                                <!-- Like / Dislike (placeholder) -->
+                                <Button text="👍" styleClass="action-icon"/>
+                                <Button text="👎" styleClass="action-icon"/>
+
+                            </HBox>
+
+
+                        </VBox>
+                    </VBox>
+
+                    <Label styleClass="footer-note"
+                           text="D-Assist can make mistakes. Check important info."/>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

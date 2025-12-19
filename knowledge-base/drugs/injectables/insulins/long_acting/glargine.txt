@@ -1,0 +1,53 @@
+DRUG NAME: Insulin Glargine
+SOURCE: MedlinePlus (NIH, public)
+
+[USES]
+Insulin glargine is a long-acting, man-made insulin used to control high blood sugar
+in adults and children with diabetes mellitus. It provides a steady level of insulin
+to help maintain blood glucose control throughout the day and night. Insulin glargine
+is not used to treat diabetic ketoacidosis.
+
+[DOSAGES]
+Insulin glargine is injected subcutaneously (under the skin) once daily at any time
+of day, but at the same time every day. It is typically injected into the thigh,
+upper arm, or abdominal area.
+
+Injection sites should be rotated to reduce the risk of skin changes such as
+lipodystrophy. Insulin glargine should not be mixed with other insulins and should
+not be used in an insulin pump or injected into a vein.
+
+[SIDE EFFECTS]
+Insulin glargine may cause serious side effects, including low blood sugar
+(hypoglycemia), which can be life-threatening. Other serious side effects include
+severe allergic reactions, low potassium levels in the blood (hypokalemia), and
+heart failure when used with certain diabetes medications.
+
+Commonly reported side effects include low blood sugar, weight gain, allergic
+reactions, injection site reactions, and skin thickening or pits at the injection
+site (lipodystrophy).
+
+[CONTRAINDICATIONS]
+Insulin glargine should not be used during episodes of low blood sugar
+(hypoglycemia) or in patients with known hypersensitivity to insulin glargine
+or any of its ingredients.
+
+[DRUG PRESCRIPTION]
+Insulin glargine can interact with other medications. Dosage adjustments may be
+required when insulin glargine is used together with certain drugs. Increased
+blood glucose monitoring is recommended when starting, stopping, or changing
+other medications that may affect blood sugar control.
+
+[POTENTIAL DRUG INTERACTIONS]
+Many medications can affect how insulin glargine works.
+
+Some medicines may increase the risk of low blood sugar (hypoglycemia), including
+other antidiabetic agents, ACE inhibitors, salicylates, and monoamine oxidase
+inhibitors (MAOIs).
+
+Other medicines may reduce the blood-glucose-lowering effect of insulin glargine,
+such as corticosteroids, diuretics, thyroid hormones, and sympathomimetic agents.
+
+Certain drugs may increase or decrease the effect of insulin glargine or mask the
+warning signs and symptoms of hypoglycemia, such as beta-blockers. Careful blood
+glucose monitoring is recommended when insulin glargine is used with other
+medications.
