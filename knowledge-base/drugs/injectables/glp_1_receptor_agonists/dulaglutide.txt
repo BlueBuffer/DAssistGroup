@@ -1,0 +1,54 @@
+DRUG NAME: Dulaglutide
+SOURCE: MedlinePlus (NIH, public)
+
+[USES]
+Dulaglutide is used along with diet and exercise to improve blood sugar control
+in adults and children 10 years of age and older with type 2 diabetes mellitus.
+It is also used to reduce the risk of major cardiovascular events, such as heart
+attack or stroke, in adults with type 2 diabetes mellitus who have known heart
+disease or multiple risk factors for heart disease.
+
+[DOSAGES]
+Dulaglutide is supplied as a solution in a prefilled, single-dose pen for
+subcutaneous injection. It is injected once weekly on the same day each week,
+at any time of day, with or without meals.
+
+Injection sites include the abdominal area (stomach), thigh, or upper arm.
+Dulaglutide should not be injected into a vein or muscle. Patients should follow
+their healthcare provider’s instructions carefully regarding dose and injection
+technique.
+
+[SIDE EFFECTS]
+Dulaglutide may cause serious side effects, including inflammation of the
+pancreas (pancreatitis), low blood sugar (hypoglycemia) when used with insulin
+or certain diabetes medications, kidney problems, severe allergic reactions,
+and gallbladder disease.
+
+The most commonly reported side effects of dulaglutide include nausea,
+diarrhea, vomiting, abdominal pain, and decreased appetite.
+
+[CONTRAINDICATIONS]
+Dulaglutide should not be used in patients with a personal or family history
+of medullary thyroid carcinoma (MTC) or in patients with Multiple Endocrine
+Neoplasia syndrome type 2 (MEN 2).
+
+Do not use dulaglutide if you are allergic to dulaglutide or any of its
+ingredients.
+
+[DRUG PRESCRIPTION]
+Dulaglutide can interact with other medications. Because dulaglutide slows
+gastric emptying, it may affect the absorption of oral medicines.
+
+Dosage adjustments of other diabetes medications, including insulin or
+sulfonylureas, may be required to reduce the risk of hypoglycemia. Increased
+blood glucose monitoring is recommended when dulaglutide is used together
+with other medications.
+
+[POTENTIAL DRUG INTERACTIONS]
+Dulaglutide may affect how other medications work by delaying gastric
+emptying, which can change the rate at which oral drugs are absorbed.
+
+When dulaglutide is used together with insulin or insulin secretagogues,
+such as sulfonylureas, the risk of hypoglycemia may increase. Blood glucose
+levels should be monitored closely when dulaglutide is used with other
+medications.

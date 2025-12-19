@@ -1,0 +1,82 @@
+DRUG NAME: Insulin Aspart (NovoLog®)
+SOURCE: MedlinePlus (NIH, public)
+
+[USES]
+Insulin Aspart is a rapid-acting human insulin analog indicated to improve glycemic control in adults and pediatric patients with diabetes mellitus. It is used to control high blood sugar in patients with diabetes and helps prevent complications such as kidney damage, blindness, nerve problems, and loss of limbs.
+
+[DOSAGES]
+Insulin Aspart injection is supplied as a clear, colorless solution containing 100 units/mL (U-100). Available dosage forms include:
+- 10 mL multiple-dose vial
+- 3 mL single-patient-use PenFill® prefilled cartridge for PenFill cartridge devices
+- 3 mL single-patient-use FlexPen® prefilled pen
+
+Dosage should be individualized based on patient needs, blood glucose monitoring, and clinical response.
+
+[SIDE EFFECTS]
+Adverse reactions observed with Insulin Aspart include:
+- Hypoglycemia
+- Allergic reactions
+- Local injection site reactions
+- Lipodystrophy
+- Rash
+- Pruritus (itching)
+
+Other commonly reported side effects may include:
+- Headache
+- Nausea
+- Diarrhea
+- Weight gain
+- Peripheral edema (swelling of hands and feet)
+- Hypokalemia (low potassium levels)
+
+[CONTRAINDICATIONS]
+Insulin Aspart is contraindicated in the following situations:
+- During episodes of hypoglycemia
+- In patients with known hypersensitivity to Insulin Aspart or any of its excipients
+
+[DRUG PRESCRIPTION]
+Dosage modification may be required when Insulin Aspart is administered concomitantly with certain medications. Increased frequency of blood glucose monitoring is recommended when initiating, modifying, or discontinuing interacting drugs.
+
+[DRUG INTERACTIONS]
+Certain medications may affect blood glucose control when used with Insulin Aspart.
+
+Drugs that may increase the risk of hypoglycemia include:
+- Antidiabetic agents
+- ACE inhibitors
+- Angiotensin II receptor blockers
+- Disopyramide
+- Fibrates
+- Fluoxetine
+- Monoamine oxidase inhibitors (MAOIs)
+- Pentoxifylline
+- Pramlintide
+- Salicylates
+- Somatostatin analogs (e.g., octreotide)
+- Sulfonamide antibiotics
+
+Drugs that may decrease the blood-glucose-lowering effect of Insulin Aspart include:
+- Atypical antipsychotics
+- Corticosteroids
+- Danazol
+- Diuretics
+- Estrogens
+- Glucagon
+- Isoniazid
+- Niacin
+- Oral contraceptives
+- Protease inhibitors
+- Thyroid hormones
+- Sympathomimetic agents (e.g., albuterol, epinephrine)
+
+Drugs that may increase or decrease the blood-glucose-lowering effect include:
+- Alcohol
+- Beta-blockers
+- Clonidine
+- Lithium salts
+- Pentamidine
+
+Drugs that may blunt the symptoms of hypoglycemia include:
+- Beta-blockers
+- Clonidine
+- Guanethidine
+- Reserpine

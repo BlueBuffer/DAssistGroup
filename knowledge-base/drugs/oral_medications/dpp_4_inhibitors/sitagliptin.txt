@@ -1,0 +1,50 @@
+DRUG NAME: Sitagliptin
+SOURCE: MedlinePlus (NIH, public)
+
+[USES]
+Sitagliptin is used along with diet and exercise to improve blood sugar control
+in adults with type 2 diabetes mellitus.
+
+Sitagliptin is not used to treat type 1 diabetes or diabetic ketoacidosis.
+
+[DOSAGES]
+Sitagliptin is supplied as a tablet taken by mouth. It is usually taken once
+daily, with or without food.
+
+The dose of sitagliptin may need to be adjusted in patients with kidney
+problems. Sitagliptin should be taken exactly as directed by a healthcare
+provider, and patients should not take more or less than prescribed.
+
+[SIDE EFFECTS]
+Sitagliptin may cause serious side effects, including inflammation of the
+pancreas (pancreatitis), heart failure, kidney problems, severe allergic
+reactions, severe joint pain, and skin reactions such as bullous pemphigoid.
+
+Low blood sugar (hypoglycemia) may occur when sitagliptin is used together
+with insulin or certain other diabetes medications.
+
+Common side effects reported with sitagliptin include upper respiratory tract
+infection, stuffy or runny nose, sore throat, and headache.
+
+[CONTRAINDICATIONS]
+Sitagliptin should not be used in patients who are allergic to sitagliptin or
+any of its ingredients.
+
+Patients should inform their healthcare provider if they have a history of
+pancreatitis, kidney disease, or heart failure before starting sitagliptin.
+
+[DRUG PRESCRIPTION]
+Sitagliptin can interact with other medications. When sitagliptin is used
+together with insulin or insulin secretagogues such as sulfonylureas, the
+risk of low blood sugar may increase.
+
+Dosage adjustments of these medications may be required, and closer blood
+glucose monitoring is recommended.
+
+[POTENTIAL DRUG INTERACTIONS]
+Sitagliptin may increase the risk of hypoglycemia when taken with insulin or
+sulfonylureas.
+
+Other medications may affect how sitagliptin works or increase the risk of
+side effects. Blood glucose levels should be monitored closely when
+sitagliptin is used together with other medications.
