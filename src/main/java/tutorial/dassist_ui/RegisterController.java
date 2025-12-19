@@ -1,10 +1,7 @@
 package tutorial.dassist_ui;
 
-import javafx.animation.PauseTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,9 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
-import java.io.IOException;
 import java.util.regex.Pattern;
 
 public class RegisterController {
@@ -25,8 +20,6 @@ public class RegisterController {
 
     @FXML private Button registerButton;
     @FXML private Label messageLabel;
-
-    // ---------------- BUTTON ACTIONS ----------------
 
     @FXML
     private void handleRegister() {
@@ -53,13 +46,13 @@ public class RegisterController {
             return;
         }
 
-        // ✅ NEW: Email already registered
+        // 4) Email already exists
         if (UserStore.exists(email)) {
             showError("This email is already registered. Please log in.");
             return;
         }
 
-        // 4) Password format
+        // 5) Password format
         if (!isValidPassword(password)) {
             showError("""
 Password must contain:
@@ -71,63 +64,36 @@ Password must contain:
             return;
         }
 
-        // 5) Username taken (demo check only)
+        // 6) Username taken (demo check)
         if (isUsernameTaken(username)) {
             showError("Username is already taken. Try another one.");
             return;
         }
 
         // ✅ SAVE USER so Login can find it
-        UserStore.addUser(email, password);
+        UserStore.addUser(username, email, password);
 
-        // ✅ Success
-        showSuccess("Registration successful ✅ You can now login.");
 
-        // OPTIONAL: auto-go to login after 1.2 seconds
-        PauseTransition pause = new PauseTransition(Duration.seconds(1.2));
-        pause.setOnFinished(e -> openLogin());
-        pause.play();
+        // ✅ GO TO SUCCESS PAGE (10 sec redirect will happen inside SuccessController)
+        openSuccessPage();
     }
 
-    @FXML
-    private void goToLogin(ActionEvent event) {
-        switchScene(event, "/tutorial/dassist_ui/login.fxml", "D-Assist - Login");
-    }
-
-    @FXML
-    private void goBack(ActionEvent event) {
-        switchScene(event, "/tutorial/dassist_ui/login.fxml", "D-Assist - Login");
-    }
-
-    // ---------------- NAVIGATION ----------------
-
-    private void openLogin() {
+    private void openSuccessPage() {
         try {
             Stage stage = (Stage) registerButton.getScene().getWindow();
-            Parent root = FXMLLoader.load(getClass().getResource("/tutorial/dassist_ui/login.fxml"));
-            stage.setTitle("D-Assist - Login");
+            Parent root = FXMLLoader.load(
+                    getClass().getResource("/tutorial/dassist_ui/success.fxml")
+            );
+            stage.setTitle("Registration Successful");
             stage.setScene(new Scene(root));
             stage.show();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            showError("Failed to open login page.");
-        }
-    }
-
-    private void switchScene(ActionEvent event, String fxmlPath, String title) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle(title);
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-            showError("Navigation failed: " + e.getMessage());
+            showError("Failed to open success page.");
         }
     }
 
-    // ---------------- VALIDATION HELPERS ----------------
+    // ---------------- HELPERS ----------------
 
     private String safeTrim(TextField tf) {
         return tf == null || tf.getText() == null ? "" : tf.getText().trim();
@@ -136,13 +102,6 @@ Password must contain:
     private void showError(String msg) {
         if (messageLabel != null) {
             messageLabel.setStyle("-fx-text-fill: red; -fx-font-size: 13;");
-            messageLabel.setText(msg);
-        }
-    }
-
-    private void showSuccess(String msg) {
-        if (messageLabel != null) {
-            messageLabel.setStyle("-fx-text-fill: green; -fx-font-size: 13;");
             messageLabel.setText(msg);
         }
     }

@@ -1,5 +1,6 @@
 package tutorial.dassist_ui;
 
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -21,10 +23,10 @@ public class LoginController {
     @FXML private CheckBox rememberMeCheckBox;
     @FXML private Label messageLabel;
 
-    // Role passed from Roles page
+    // Role passed from Roles page (optional - keep)
     private String selectedRole = "STAFF"; // default
 
-    // ✅ This runs when the FXML loads (helps detect fx:id problems)
+    // ✅ runs when FXML loads
     @FXML
     private void initialize() {
         if (emailField == null || passwordField == null) {
@@ -51,7 +53,7 @@ public class LoginController {
             return;
         }
 
-        // ✅ Now it checks the SAME store used by RegisterController
+        // ✅ check registered user from the SAME store as RegisterController
         if (!UserStore.exists(email)) {
             showError("Account not found. Please sign up first.");
             return;
@@ -65,17 +67,14 @@ public class LoginController {
         // ✅ Success
         if (rememberMeCheckBox != null && rememberMeCheckBox.isSelected()) {
             System.out.println("Remember Me: ON for " + email);
-            // Later you can save this in Preferences/file
         }
 
-        showSuccess("Login successful ✅ (" + selectedRole + ")");
+        showSuccess("Login successful ✅");
 
-        // ✅ Route based on role
-        if ("ADMIN".equalsIgnoreCase(selectedRole)) {
-            switchScene(event, "/tutorial/dassist_ui/admin_dashboard.fxml", "Admin Dashboard");
-        } else {
-            switchScene(event, "/tutorial/dassist_ui/pharmacy_dashboard.fxml", "Pharmacy Staff Dashboard");
-        }
+        // ✅ AUTO move to Roles page after a short delay (NO need to click Back)
+        PauseTransition pause = new PauseTransition(Duration.seconds(0.8));
+        pause.setOnFinished(e -> switchScene(event, "/tutorial/dassist_ui/roles.fxml", "D-Assist - Roles"));
+        pause.play();
     }
 
     @FXML
@@ -119,7 +118,7 @@ public class LoginController {
         }
     }
 
-    // ✅ Stores the selected role
+    // ✅ Stores the selected role (kept)
     public void setSelectedRole(String selectedRole) {
         if (selectedRole != null && !selectedRole.isBlank()) {
             this.selectedRole = selectedRole;

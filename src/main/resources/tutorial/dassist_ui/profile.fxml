@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="tutorial.dassist_ui.ProfileController"
+            style="-fx-background-color: #f4f5f7;">
+
+    <!-- Center container -->
+    <StackPane AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <!-- Card -->
+        <VBox prefWidth="720" prefHeight="420" spacing="22"
+              style="-fx-background-color: #ffffff; -fx-background-radius: 24; -fx-border-radius: 24; -fx-border-color: #e6e8ee;"
+              alignment="TOP_CENTER">
+
+            <effect>
+                <DropShadow radius="18" offsetY="6" color="#1A000000"/>
+            </effect>
+
+            <padding>
+                <Insets top="28" right="34" bottom="28" left="34"/>
+            </padding>
+
+            <!-- Header -->
+            <VBox spacing="6" alignment="CENTER_LEFT" prefWidth="650">
+                <Label text="Profile Settings" style="-fx-text-fill: #111827;">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="22"/>
+                    </font>
+                </Label>
+                <Label text="View and update your account details"
+                       style="-fx-text-fill: #6b7280; -fx-font-size: 13;"/>
+            </VBox>
+
+            <!-- Form grid -->
+            <GridPane hgap="14" vgap="16" prefWidth="650">
+
+                <!-- NAME -->
+                <Label text="Name" style="-fx-text-fill: #374151; -fx-font-size: 13;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="nameField"
+                           disable="true"
+                           prefWidth="420"
+                           style="-fx-background-color: #f9fafb; -fx-border-color: #e5e7eb; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10 12;"
+                           GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Button text="Edit"
+                        onAction="#editName"
+                        style="-fx-background-color: #ffffff; -fx-border-color: #d1d5db; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 8 14; -fx-text-fill: #111827; -fx-font-size: 12;"
+                        GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+
+                <!-- EMAIL -->
+                <Label text="Email" style="-fx-text-fill: #374151; -fx-font-size: 13;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="emailField"
+                           disable="true"
+                           prefWidth="420"
+                           style="-fx-background-color: #f9fafb; -fx-border-color: #e5e7eb; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10 12;"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Button text="Edit"
+                        onAction="#editEmail"
+                        style="-fx-background-color: #ffffff; -fx-border-color: #d1d5db; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 8 14; -fx-text-fill: #111827; -fx-font-size: 12;"
+                        GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+
+                <!-- PASSWORD -->
+                <Label text="Password" style="-fx-text-fill: #374151; -fx-font-size: 13;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <PasswordField fx:id="passwordField"
+                               disable="true"
+                               prefWidth="420"
+                               promptText="••••••••"
+                               style="-fx-background-color: #f9fafb; -fx-border-color: #e5e7eb; -fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 10 12;"
+                               GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Button text="Edit"
+                        onAction="#editPassword"
+                        style="-fx-background-color: #ffffff; -fx-border-color: #d1d5db; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 8 14; -fx-text-fill: #111827; -fx-font-size: 12;"
+                        GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+            </GridPane>
+
+            <!-- Message -->
+            <Label fx:id="messageLabel"
+                   style="-fx-text-fill: #ef4444; -fx-font-size: 12;"
+                   wrapText="true"
+                   maxWidth="650"/>
+
+            <!-- Footer buttons -->
+            <HBox spacing="12" alignment="CENTER_RIGHT" prefWidth="650">
+                <Button text="Log out"
+                        onAction="#handleLogout"
+                        style="-fx-background-color: #f97316; -fx-background-radius: 12; -fx-padding: 10 18; -fx-text-fill: white; -fx-font-size: 13;"/>
+            </HBox>
+
+        </VBox>
+    </StackPane>
+
+</AnchorPane>
